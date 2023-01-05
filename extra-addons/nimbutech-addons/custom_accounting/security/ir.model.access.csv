@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_custom_accounting_admin,custom accounting admin,model_custom_accounting_account_redirect,group_custom_accounting_admin,1,1,1,1
+access_custom_accounting_internal_user,custom accounting user,model_custom_accounting_account_redirect,base.group_user,1,0,0,0

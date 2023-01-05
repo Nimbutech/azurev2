@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Crear la vista formulario para el wizard -->
+    <record id="custom_crm_bant_wizard_form_view" model="ir.ui.view">
+        <field name="name">crm.bant.wizard.form</field>
+        <field name="model">crm.bant.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Bant">
+                <group>
+                    <group>
+                        <field name="budget" />
+                    </group>
+                    <group>
+                        <field name="authority" />
+                    </group>
+                    <group>
+                        <field name="need" />
+                    </group>
+                    <group>
+                        <field name="timing" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="save_bant" string="Guardar" type="object" class="btn-primary" />
+                    <button string="Cancelar" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Crear la accion que mostrara el wizard -->
+    <!-- <record id="action_my_wizard" model="ir.actions.act_window">
+        <field
+    name="name">BANT</field>
+        <field name="res_model">crm.bant.wizard</field>
+        <field
+    name="view_mode">form</field>
+        <field name="target">new</field>
+        <field
+    name="context">{'default_lead_id': active_id}</field>
+    </record> -->
+</odoo>

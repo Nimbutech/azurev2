@@ -1,0 +1,78 @@
+<odoo>
+  <data>
+    <!-- Añadir el boton de bant al formulario de crm.lead -->
+    <record id="custom_crm_open_bant_wizard" model="ir.ui.view">
+      <field name="name">crm.lead.form</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_lead_view_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//header" position="inside">
+          <button name="open_crm_bant_wizard_form" string="BANT" type="object"
+            class="btn-primary" />
+        </xpath>
+        <xpath expr="//sheet/group/group/field[@name='date_deadline']"
+          position="before">
+          <field name="state" />
+        </xpath>
+        <xpath expr="//sheet/group/group/field[@name='user_id']"
+          position="before">
+          <field name="number_of_employees" />
+          <field name="industry" />
+        </xpath>
+        <xpath expr="//field[@name='date_deadline']" position="after">
+          <field name="close_date" />
+        </xpath>
+        <xpath expr="//sheet/notebook">
+          <page string="Etapas">
+            <group string="Cliente potencial">
+              <group>
+                <field name="process" />
+              </group>
+              <group>
+                <field name="close_date" />
+              </group>
+            </group>
+            <group string="Calificado">
+              <group>
+                <field name="request_type" />
+              </group>
+              <group>
+                <field name="opportunity_type" />
+              </group>
+            </group>
+            <group string="Propuesta">
+              <group>
+                <field name="administrative_description" />
+                <field name="contract_modality" /></group>
+              <group>
+                <field name="supporting_offer" />
+                <field name="presale" />
+              </group>
+            </group>
+            <group string="Negociación">
+              <group>
+                <field name="nit" />
+              </group>
+            </group>
+            <group string="Negociación">
+              <group>
+
+              </group>
+            </group>
+            <group string="Formalización">
+              <group>
+
+              </group>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+
+
+  </data>
+</odoo>
+
+<!-- seguridad de conver2ticket -->
+<!--
+access_crm_lead_convert2ticket,access.crm.lead.convert2ticket,model_crm_lead_convert2ticket,helpdesk.group_helpdesk_manager,1,1,1,0 -->

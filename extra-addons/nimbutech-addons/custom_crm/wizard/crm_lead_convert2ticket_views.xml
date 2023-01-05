@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- view of the Wizard Form -->
+    <!-- <record id="crm_lead_convert2ticket_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.convert2ticket.form</field>
+        <field name="model">crm.lead.convert2ticket</field>
+        <field name="inherit_id" ref="crm_helpdesk.crm_lead_convert2ticket_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/group/field[@name='team_id']" position="after">
+                <field name="assign_to" />
+            </xpath>
+        </field>
+    </record> -->
+
+</odoo>
