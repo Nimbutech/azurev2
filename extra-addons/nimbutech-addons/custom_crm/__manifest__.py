@@ -7,8 +7,6 @@
 
     'description': """
         Módulo personalizado de crm para nimbutech""",
-    """,
-
     'author': "Nimbutech",
     'website': "https://www.nimbutech.com",
 
